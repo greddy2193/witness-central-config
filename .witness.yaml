@@ -1,5 +1,6 @@
 # .witness.yaml
 run:
+step: build
   workingdir: maven-demo-project
   outfile: witness-central-config/attestations/witness-demo-att.jsonl
   trace: true
