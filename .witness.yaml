@@ -2,5 +2,5 @@
 run:
   step: build
   workingdir: .
-  outfile: witness-central-config/attestations/witness-demo-att.jsonl
+  outfile: witness-demo-att.jsonl
   trace: true
