@@ -8,8 +8,8 @@ run:
 sign:
   key: keys/signing-key.pem
   certificate: keys/signing-cert.pem
-  outfile: policies/policy-signed.json
-  datatype: policy
+  outfile: attestations/witness-demo-att.jsonl
+  datatype: attestation
 
 verify:
   attestations:
