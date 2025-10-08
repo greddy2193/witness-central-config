@@ -3,7 +3,4 @@ run:
   step: build
   workingdir: maven-demo-project
   outfile: witness-demo-att.jsonl
-  predicate-type: "https://slsa.dev/provenance/v1"
-  attestors:
-    - shell
   trace: true
