@@ -1,18 +1,18 @@
 # .witness.yaml
 run:
-  key: keys/signing-key.pem
-  certificate: keys/signing-cert.pem
-  outfile: attestations/witness-demo-att.jsonl
+  key: witness-central-config/keys/signing-key.pem
+  certificate: witness-central-configkeys/signing-cert.pem
+  outfile: witness-central-config/attestations/witness-demo-att.jsonl
   trace: true
 
 sign:
-  key: keys/signing-key.pem
-  certificate: keys/signing-cert.pem
-  outfile: attestations/witness-demo-att.jsonl
+  key: witness-central-config/keys/signing-key.pem
+  certificate: /witness-central-configkeys/signing-cert.pem
+  outfile: witness-central-config/attestations/witness-demo-att.jsonl
   datatype: attestation
 
 verify:
   attestations:
-    - attestations/witness-demo-att.jsonl
-  publickey: keys/signing-cert.pem
+    - witness-central-config/attestations/witness-demo-att.jsonl
+  publickey: /witness-central-configkeys/signing-cert.pem
   policy: policies/policy.rego
