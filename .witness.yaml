@@ -1,0 +1,18 @@
+# .witness.yaml
+run:
+  key: keys/signing-key.pem
+  certificate: keys/signing-cert.pem
+  outfile: attestations/witness-demo-att.jsonl
+  trace: true
+
+sign:
+  key: keys/signing-key.pem
+  certificate: keys/signing-cert.pem
+  outfile: policies/policy-signed.json
+  datatype: policy
+
+verify:
+  attestations:
+    - attestations/witness-demo-att.jsonl
+  publickey: keys/signing-cert.pem
+  policy: policies/policy.rego
