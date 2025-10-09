@@ -21,22 +21,22 @@
           "regopolicies": [
             {
               "name": "artifact-check",
-              "module": "$REGO_B64"
+              "module": "B64_REGO_PLACEHOLDER"
             }
           ]
         }
       ],
       "functionaries": [
         {
-          "publickeyid": "$KEYID"
+          "publickeyid": "KEYID_PLACEHOLDER"
         }
       ]
     }
   },
   "publickeys": {
-    "$KEYID": {
-      "keyid": "$KEYID",
-      "key": "$(cat testpub.pem | base64 -w 0)"
+    "KEYID_PLACEHOLDER": {
+      "keyid": "KEYID_PLACEHOLDER",
+      "key": "B64_PUBLIC_KEY_PLACEHOLDER"
     }
   }
 }
