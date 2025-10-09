@@ -5,7 +5,7 @@
       "name": "build",
       "attestations": [
         {
-          "type": "https://witness.testifysec.com/attestation-collection/v0.1",
+          "type": "https://witness.dev/attestations/command-run/v0.1",
           "regopolicies": [
             {
               "name": "command-check",
