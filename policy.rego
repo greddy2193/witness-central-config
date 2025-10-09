@@ -2,14 +2,18 @@ package witness.verify
 
 default allow = false
 
-allow {
+# A function to find a specific predicate type inside the collections attestation
+get_predicate(predicate_type) = result {
     some i
     attestation_item := input.predicate.attestations[i]
-    attestation_item.type == "https://witness.dev/attestations/command-run/v0.1"
-    
-    # Check that the command matches the expected array of arguments
-    attestation_item.attestation.cmd == ["mvn", "-f", "pom.xml", "clean", "package", "-DskipTests"]
-    
-    # Additionally, check for a successful exit code
-    attestation_item.exitcode.exitcode == 0
+    attestation_item.type == predicate_type
+    result := attestation_item
+}
+
+# Rule to allow verification if all necessary checks pass
+allow {
+    # Check for the command-run attestation
+    command_predicate := get_predicate("https://witness.dev/attestations/command-run/v0.1")
+    command_predicate.attestation.cmd == ["mvn", "-f", "pom.xml", "clean", "package", "-DskipTests"]
+    command_predicate.exitcode == 0
 }
