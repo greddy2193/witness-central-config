@@ -1,0 +1,33 @@
+{
+  "expires": "2026-01-01T00:00:00Z",
+  "steps": {
+    "build": {
+      "name": "build",
+      "attestations": [
+        {
+          "type": "https://witness.dev/attestations/command-run/v0.1"
+        },
+        {
+          "type": "https://witness.dev/attestations/product/v0.1",
+          "regopolicies": [
+            {
+              "name": "artifact-check",
+              "module": "$REGO_B64"
+            }
+          ]
+        }
+      ],
+      "functionaries": [
+        {
+          "publickeyid": "$KEYID"
+        }
+      ]
+    }
+  },
+  "publickeys": {
+    "$KEYID": {
+      "keyid": "$KEYID",
+      "key": "$(cat testpub.pem | base64 -w 0)"
+    }
+  }
+}
