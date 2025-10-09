@@ -12,8 +12,6 @@ get_predicate(predicate_type) = result {
 
 # Rule to allow verification if all necessary checks pass
 allow {
-    # Check for the command-run attestation
-    command_predicate := get_predicate("https://witness.dev/attestations/command-run/v0.1")
-    command_predicate.attestation.cmd == ["mvn", "-f", "pom.xml", "clean", "package", "-DskipTests"]
-    command_predicate.exitcode == 0
+    input.cmd == ["mvn", "-f", "pom.xml", "clean", "package", "-DskipTests"]
+    input.exitcode == 0
 }
