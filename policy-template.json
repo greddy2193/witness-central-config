@@ -6,12 +6,23 @@
       "attestations": [
         {
           "type": "https://witness.dev/attestations/command-run/v0.1",
-          "regopolicies": [
-            {
-              "name": "command-check",
-              "module": "B64_REGO_PLACEHOLDER"
-            }
-          ]
+          "regopolicies": []
+        },
+        {
+          "type": "https://witness.dev/attestations/material/v0.1",
+          "regopolicies": []
+        },
+        {
+          "type": "https://witness.dev/attestations/git/v0.1",
+          "regopolicies": []
+        },
+        {
+          "type": "https://witness.dev/attestations/product/v0.1",
+          "regopolicies": []
+        },
+                {
+          "type": "https://witness.dev/attestations/environment/v0.1",
+          "regopolicies": []
         }
       ],
       "functionaries": [
