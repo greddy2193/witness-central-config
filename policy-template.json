@@ -3,28 +3,6 @@
   "steps": {
     "build": {
       "name": "build",
-      "attestations": [
-        {
-          "type": "https://witness.dev/attestations/command-run/v0.1",
-          "regopolicies": []
-        },
-        {
-          "type": "https://witness.dev/attestations/material/v0.1",
-          "regopolicies": []
-        },
-        {
-          "type": "https://witness.dev/attestations/git/v0.1",
-          "regopolicies": []
-        },
-        {
-          "type": "https://witness.dev/attestations/product/v0.1",
-          "regopolicies": []
-        },
-                {
-          "type": "https://witness.dev/attestations/environment/v0.1",
-          "regopolicies": []
-        }
-      ],
       "functionaries": [
         {
           "publickeyid": "KEYID_PLACEHOLDER"
