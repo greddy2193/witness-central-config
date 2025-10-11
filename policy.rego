@@ -4,5 +4,6 @@ default allow = false
 
 # Rule to allow verification if all necessary checks pass
 allow {
-    input._type == "https://in-toto.io/Statement/v0.1
+    input.cmd == ["mvn", "-f", "pom.xml", "clean", "package", "-DskipTests"]
+    input.exitcode == 0
 }
